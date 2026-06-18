@@ -329,9 +329,17 @@
   .footer-tag { margin-top: 1rem; max-width: 32ch; font-size: var(--step--1); }
   .footer-contact { text-align: right; }
   @media (max-width: 600px) { .footer-contact { text-align: left; } }
-  .footer-contact a { color: var(--on-dark); text-decoration: none; font-size: var(--step-1); font-family: var(--serif); border-bottom: 1.5px solid var(--brand); padding-bottom: 2px; }
-  .footer-contact a:hover { color: var(--brand); }
+  .footer-contact a.footer-email { color: var(--on-dark); text-decoration: none; font-size: var(--step-1); font-family: var(--serif); border-bottom: 1.5px solid var(--brand); padding-bottom: 2px; }
+  .footer-contact a.footer-email:hover { color: var(--brand); }
   .footer-contact p { margin-top: 0.75rem; font-size: var(--step--1); }
+  .footer-loc { margin-top: 1rem; display: flex; align-items: center; gap: 0.55rem; justify-content: flex-end; color: var(--on-dark); font-weight: 500; }
+  @media (max-width: 600px) { .footer-loc { justify-content: flex-start; } }
+  .footer-loc .flag {
+    flex: none; width: 1.45rem; height: 1rem; border-radius: 3px; overflow: hidden;
+    box-shadow: 0 0 0 1px oklch(1 0 0 / 0.16), 0 1px 2px oklch(0 0 0 / 0.3);
+  }
+  .footer-loc .flag svg { display: block; width: 100%; height: 100%; }
+  .footer-loc .city { color: var(--on-dark-muted); }
   .footer-bottom { margin-top: clamp(2.5rem, 2rem + 2vw, 3.5rem); padding-top: 1.5rem; border-top: 1px solid var(--on-dark-line); display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; font-size: var(--step--1); }
   .footer-bottom .badge { display: inline-flex; align-items: center; gap: 0.5rem; }
   .footer-bottom .badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brand); }
@@ -582,9 +590,9 @@
       <h2 class="reveal">Have something to build? <em>Let's make it real.</em></h2>
       <p class="reveal" data-delay="1">Book a 30-minute call. Tell us what you're trying to ship, and we'll tell you honestly how we'd approach it, what it might take, and whether we're the right team for it.</p>
       <div class="hero-cta reveal" data-delay="2">
-        <a class="btn btn-light" href="mailto:hello@green-software.solutions?subject=Starting%20a%20project%20with%20Green%20Software">Start a project <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-light" href="mailto:roman@green-software.solutions?subject=Starting%20a%20project%20with%20Green%20Software">Start a project <span class="arrow" aria-hidden="true">→</span></a>
       </div>
-      <p class="cta-note reveal" data-delay="2">Prefer email? Write to <a href="mailto:hello@green-software.solutions">hello@green-software.solutions</a></p>
+      <p class="cta-note reveal" data-delay="2">Prefer email? Write to <a href="mailto:roman@green-software.solutions">roman@green-software.solutions</a></p>
     </div>
   </section>
 </main>
@@ -600,8 +608,14 @@
         <p class="footer-tag">A software development studio. We design and build web and mobile products for teams that need them done right.</p>
       </div>
       <div class="footer-contact">
-        <a href="mailto:hello@green-software.solutions">hello@green-software.solutions</a>
-        <p>Remote-first. Working with teams worldwide.</p>
+        <a class="footer-email" href="mailto:roman@green-software.solutions">roman@green-software.solutions</a>
+        <p class="footer-loc">
+          <span class="flag" role="img" aria-label="Flag of Ukraine">
+            <svg viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="8" fill="#0057B7"/><rect y="8" width="24" height="8" fill="#FFD700"/></svg>
+          </span>
+          Proudly based in Lviv, Ukraine.
+        </p>
+        <p class="footer-loc-sub"><span class="city">Building for teams worldwide, remote-first.</span></p>
       </div>
     </div>
     <div class="footer-bottom">
