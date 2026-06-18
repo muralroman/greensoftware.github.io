@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Spectral:wght@300;400;500;600&display=swap" />
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%231f3a2b'/%3E%3Cg%20fill='none'%20stroke='%2334a06a'%20stroke-width='3'%20stroke-linecap='round'%3E%3Cpath%20d='M8%2023v-6'/%3E%3Cpath%20d='M16%2023v-10'/%3E%3Cpath%20d='M24%2023v-15'/%3E%3C/g%3E%3C/svg%3E" />
+<link rel="icon" type="image/png" href="logo-icon.png" />
 
 <style>
   /* ============================== TOKENS ============================== */
@@ -128,15 +128,15 @@
   .site-header[data-scrolled="true"] { border-bottom-color: var(--line); }
   .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4.5rem; }
 
-  .brand { display: inline-flex; align-items: center; gap: 0.65rem; text-decoration: none; color: var(--ink); font-weight: 700; letter-spacing: -0.01em; min-width: 0; }
+  .brand { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--ink); font-weight: 700; letter-spacing: -0.01em; min-width: 0; border-radius: 4px; }
   .brand > span { white-space: nowrap; }
-  .brand svg { width: 30px; height: 30px; flex: none; }
-  .brand b { font-weight: 700; }
+  .brand img { height: 50px; width: auto; flex: none; transition: opacity 0.2s; }
+  .brand:hover img { opacity: 0.82; }
   .brand .tld { color: var(--muted); font-weight: 500; }
   @media (max-width: 760px) {
     .header-inner { gap: 0.75rem; min-height: 4rem; }
     .brand { font-size: 0.95rem; gap: 0.5rem; }
-    .brand svg { width: 26px; height: 26px; }
+    .brand img { height: 42px; }
     .header-inner .btn-primary { padding: 0.6rem 0.95rem; }
   }
   @media (max-width: 360px) { .brand .tld { display: none; } }
@@ -322,8 +322,9 @@
   /* ============================== FOOTER ============================== */
   .site-footer { background: var(--dark-2); color: var(--on-dark-muted); padding-block: clamp(3rem, 2rem + 3vw, 4.5rem); }
   .footer-top { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; align-items: flex-start; }
-  .footer-brand { display: inline-flex; align-items: center; gap: 0.65rem; color: var(--on-dark); font-weight: 700; text-decoration: none; }
-  .footer-brand svg { width: 30px; height: 30px; }
+  .footer-brand { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--on-dark); font-weight: 700; text-decoration: none; border-radius: 4px; }
+  .footer-brand img { height: 56px; width: auto; filter: brightness(0) invert(1); transition: opacity 0.2s; }
+  .footer-brand:hover img { opacity: 0.85; }
   .footer-brand .tld { color: var(--on-dark-muted); font-weight: 500; }
   .footer-tag { margin-top: 1rem; max-width: 32ch; font-size: var(--step--1); }
   .footer-contact { text-align: right; }
@@ -358,12 +359,7 @@
 <header class="site-header" id="top">
   <div class="wrap header-inner">
     <a class="brand" href="#top" aria-label="Green Software — home">
-      <svg viewBox="0 0 32 32" aria-hidden="true">
-        <rect width="32" height="32" rx="7" fill="var(--dark)"/>
-        <g fill="none" stroke="var(--brand)" stroke-width="3" stroke-linecap="round">
-          <path d="M8 23v-6"/><path d="M16 23v-10"/><path d="M24 23v-15"/>
-        </g>
-      </svg>
+      <img src="logo-icon.png" width="128" height="128" alt="" />
       <span><b>Green Software</b> <span class="tld">.solutions</span></span>
     </a>
     <nav class="nav" aria-label="Primary">
@@ -598,12 +594,7 @@
     <div class="footer-top">
       <div>
         <a class="footer-brand" href="#top" aria-label="Green Software — home">
-          <svg viewBox="0 0 32 32" aria-hidden="true">
-            <rect width="32" height="32" rx="7" fill="var(--brand)"/>
-            <g fill="none" stroke="var(--dark)" stroke-width="3" stroke-linecap="round">
-              <path d="M8 23v-6"/><path d="M16 23v-10"/><path d="M24 23v-15"/>
-            </g>
-          </svg>
+          <img src="logo-icon.png" width="128" height="128" alt="" />
           <span><b>Green Software</b> <span class="tld">.solutions</span></span>
         </a>
         <p class="footer-tag">A software development studio. We design and build web and mobile products for teams that need them done right.</p>
